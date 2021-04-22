@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/name_graph"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFF"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/namestock"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/icon_graph"
+            android:gravity="center"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/icon_graph"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="4dp" />
+
+    </RelativeLayout>
+
+    <com.castprogramm.investgame.stock.CostView
+        android:id="@+id/graphic"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_graph"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/quantity_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Кол-во:"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/buy"
+        app:layout_constraintStart_toEndOf="@+id/sold"
+        app:layout_constraintTop_toBottomOf="@+id/graphic"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/sold"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="Продать"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graphic"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:text="Купить"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graphic"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/prquant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/graphic"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textgraphic"
+        app:layout_constraintTop_toBottomOf="@id/sold"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imagecountry"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/design_default_color_background"
+            android:text="@string/info"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toEndOf="@id/imagecountry" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagecountry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
